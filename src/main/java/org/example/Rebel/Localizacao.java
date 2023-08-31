@@ -1,3 +1,5 @@
+package org.example.Rebel;
+
 public class Localizacao {
 
     public Integer latitude;
@@ -9,6 +11,10 @@ public class Localizacao {
         this.longitude = longitude;
         this.galaxia = galaxia;
     }
+
+    public Localizacao() {
+    }
+
 
     public Integer getLatitude() {
         return latitude;

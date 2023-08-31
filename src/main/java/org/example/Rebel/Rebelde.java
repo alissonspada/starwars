@@ -1,3 +1,10 @@
+package org.example.Rebel;
+
+import org.example.Rebel.Item;
+import org.example.Rebel.Localizacao;
+
+import java.util.List;
+
 public class Rebelde {
 
     public String nome;
@@ -5,14 +12,23 @@ public class Rebelde {
     public String genero;
     public Localizacao localizacao;
     public Boolean traidor;
+    public List<Item> itens;
 
-
-    public Rebelde(String nome, Integer idade, String genero, Localizacao localizacao, Boolean traidor) {
+    public Rebelde(String nome, Integer idade, String genero, Localizacao localizacao, Boolean traidor, List<Item> itens) {
         this.nome = nome;
         this.idade = idade;
         this.genero = genero;
         this.localizacao = localizacao;
         this.traidor = traidor;
+        this.itens = itens;
+    }
+
+    public List<Item> getItens() {
+        return itens;
+    }
+
+    public void setItens(List<Item> itens) {
+        this.itens = itens;
     }
 
     public String getNome() {
