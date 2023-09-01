@@ -1,19 +1,34 @@
 package org.example.services;
 
-import org.example.Rebel.Localizacao;
-import org.example.Rebel.Rebelde;
+import org.example.rebel.Localizacao;
+import org.example.rebel.Rebelde;
+import org.example.repository.ItemRepository;
+import org.example.repository.LocalizacaoRepository;
+import org.example.repository.RebeldeRepository;
 
 public class RebeldeService {
 
-    public Rebelde rebelde;
+    LocalizacaoRepository localRepo = new LocalizacaoRepository();
+    RebeldeRepository rebelRepo = new RebeldeRepository();
+    ItemRepository itemRepo = new ItemRepository();
 
 
-    public Localizacao reportarLoc(){
+    public void reportarLoc(){
         Localizacao loc = new Localizacao();
         loc.setLongitude(12321321);
         loc.setGalaxia(32);
         loc.setLatitude(3123);
-        return loc;
     }
 
+    public void reportTraidor(){
+        Rebelde rebelde = new Rebelde();
+        if(rebelde.getTraidor()){
+            rebelde.setTraidor(true);
+        }else {
+            rebelde.setTraidor(false);}
+    }
+
+    public void traidorTrade(){
+        Rebelde traidor = new Rebelde();
+    }
 }

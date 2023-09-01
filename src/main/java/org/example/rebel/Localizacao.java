@@ -1,12 +1,21 @@
-package org.example.Rebel;
+package org.example.rebel;
 
 public class Localizacao {
 
-    public Integer latitude;
-    public Integer longitude;
-    public Integer galaxia;
 
-    public Localizacao(Integer latitude, Integer longitude, Integer galaxia) {
+    private Integer id;
+    private Integer latitude;
+    private Integer longitude;
+    private Integer galaxia;
+
+    public Localizacao(Integer latitude, Integer longitude, Integer galaxia, Integer id) {
+        this.id = id;
+        this.latitude = latitude;
+        this.longitude = longitude;
+        this.galaxia = galaxia;
+    }
+
+    public void setNewLocation(Integer latitude, Integer longitude, Integer galaxia){
         this.latitude = latitude;
         this.longitude = longitude;
         this.galaxia = galaxia;
@@ -15,6 +24,14 @@ public class Localizacao {
     public Localizacao() {
     }
 
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
     public Integer getLatitude() {
         return latitude;

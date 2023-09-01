@@ -1,12 +1,12 @@
 package org.example.services;
 
-import org.example.Rebel.Item;
+import org.example.rebel.Item;
 
 import java.util.Objects;
 
 public class ItensService {
 
-    public void valorItens(Integer valorItens){
+    public void valorItens(){
         Item itens = new Item();
         if(Objects.equals(itens.getNomeItem(), "arma")){
             itens.setPontos(4);
