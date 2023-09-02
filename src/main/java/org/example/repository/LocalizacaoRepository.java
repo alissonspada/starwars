@@ -1,6 +1,6 @@
 package org.example.repository;
 
-import org.example.rebel.Localizacao;
+import org.example.rebelde.Localizacao;
 
 import java.util.ArrayList;
 import java.util.List;

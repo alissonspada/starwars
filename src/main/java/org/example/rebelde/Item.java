@@ -1,4 +1,6 @@
-package org.example.rebel;
+package org.example.rebelde;
+
+import java.util.List;
 
 public class Item {
 
@@ -6,16 +8,35 @@ public class Item {
     private String nomeItem;
     private Integer pontos;
 
-    public Item(String nomeItem, Integer pontos, Integer id) {
+    private List<Integer> listaItem;
+
+    public Item(String nomeItem, Integer pontos, Integer id, List<Integer> listaItem) {
+        this.listaItem = listaItem;
         this.nomeItem = nomeItem;
         this.pontos = pontos;
+        this.id = id;
     }
 
     public Item() {
     }
 
+
+    public List<Integer> getListaItem() {
+        return listaItem;
+    }
+
+    public void setListaItem(List<Integer> listaItem) {
+        this.listaItem = listaItem;
+    }
+
     public Integer getId() {
         return id;
+    }
+
+    public void apresentar(){
+        System.out.println("rebelde " + getId());
+        System.out.println("rebelde2 " + getNomeItem());
+        System.out.println("rebelde " + getPontos());
     }
 
     public void setId(Integer id) {
@@ -38,15 +59,10 @@ public class Item {
         this.pontos = pontos;
     }
 
-    @Override
-    public String toString() {
-        return "Item{" +
-                "nomeItem='" + nomeItem + '\'' +
-                ", pontos=" + pontos +
-                '}';
-    }
+
 
 }
+
 
 
 

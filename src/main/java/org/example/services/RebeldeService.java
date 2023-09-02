@@ -1,7 +1,7 @@
 package org.example.services;
 
-import org.example.rebel.Localizacao;
-import org.example.rebel.Rebelde;
+import org.example.rebelde.Localizacao;
+import org.example.rebelde.Rebelde;
 import org.example.repository.ItemRepository;
 import org.example.repository.LocalizacaoRepository;
 import org.example.repository.RebeldeRepository;

@@ -1,6 +1,4 @@
-package org.example.rebel;
-
-import java.util.List;
+package org.example.rebelde;
 
 public class Rebelde {
 
@@ -10,7 +8,7 @@ public class Rebelde {
     private String genero;
     private Boolean traidor;
 
-    public Rebelde(String nome, Integer idade, String genero, Boolean traidor, List<Item> itens, Integer id) {
+    public Rebelde(String nome, Integer idade, String genero, Boolean traidor, Integer id) {
         this.id = id;
         this.nome = nome;
         this.idade = idade;
@@ -20,6 +18,7 @@ public class Rebelde {
 
     public Rebelde() {
     }
+
 
 
     public Integer getId() {

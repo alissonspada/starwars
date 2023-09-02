@@ -1,6 +1,6 @@
 package org.example.repository;
 
-import org.example.rebel.Item;
+import org.example.rebelde.Item;
 
 import java.util.ArrayList;
 import java.util.List;
