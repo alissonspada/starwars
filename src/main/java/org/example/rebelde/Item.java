@@ -33,11 +33,6 @@ public class Item {
         return id;
     }
 
-    public void apresentar(){
-        System.out.println("rebelde " + getId());
-        System.out.println("rebelde2 " + getNomeItem());
-        System.out.println("rebelde " + getPontos());
-    }
 
     public void setId(Integer id) {
         this.id = id;

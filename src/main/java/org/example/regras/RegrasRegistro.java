@@ -5,11 +5,12 @@ import org.example.exceptions.RegistrarException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RegrasRegistro {
+public class RegrasRegistro{
 
         public void registroRegras(String nome, Integer idade, String genero, Boolean traidor, Integer latitude, Integer longitude, Integer galaxia, String base, List<Integer> inventory) throws RegistrarException{
 
             List<String> erro = new ArrayList<>();
+
 
             if (nome == null){
                 erro.add("Nome inválido");
@@ -27,7 +28,7 @@ public class RegrasRegistro {
                 erro.add("genero indefinido");
             } else if (!genero.equals("homem") &&
             !genero.equals("mulher")){
-                erro.add("genero incorreto: escola homem ou mulher");
+                erro.add("genero incorreto: escolha homem ou mulher");
             }
 
             if (traidor == null){
