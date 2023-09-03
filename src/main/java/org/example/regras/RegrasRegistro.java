@@ -19,13 +19,13 @@ public class RegrasRegistro{
             }
 
             if (idade == null) {
-                erro.add("idade nula");
+                erro.add("Idade Invalida");
             } else if (idade < 18){
                 erro.add("menor de idade");
             }
 
             if (genero == null){
-                erro.add("genero indefinido");
+                erro.add("Genero Indefinido");
             } else if (!genero.equals("homem") &&
             !genero.equals("mulher")){
                 erro.add("genero incorreto: escolha homem ou mulher");
@@ -58,6 +58,8 @@ public class RegrasRegistro{
                 erro.add("valor invalido");
             }
 
-
+            if(!erro.isEmpty()){
+                throw new RegistrarException(String.join("null", erro));
+            }
         }
 }
