@@ -6,7 +6,7 @@ import org.junit.Test;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class TestesRegras {
+public class TestesLocalizacao {
     RegrasRegistro regraRegistro = new RegrasRegistro();
 
     @Test

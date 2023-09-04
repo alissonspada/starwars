@@ -17,7 +17,7 @@ public class Localizacao {
         this.base = base;
     }
 
-    public void setNewLocation(Integer latitude, Integer longitude, Integer galaxia, String base){
+    public void setNovaLoc(Integer latitude, Integer longitude, Integer galaxia, String base){
         this.latitude = latitude;
         this.longitude = longitude;
         this.galaxia = galaxia;
