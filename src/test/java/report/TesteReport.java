@@ -1,5 +1,6 @@
 package report;
 
+import org.example.exceptions.RegistrarException;
 import org.example.exceptions.ReportarException;
 import org.example.rebelde.Rebelde;
 import org.example.regras.RegrasReport;
@@ -16,9 +17,10 @@ public class TesteReport {
 
     @Test
     public void shouldReturnTraitor() throws ReportarException {
-        Rebelde traidor;
-        rebeldeRepo.addRebelde(traidor = new Rebelde("getulio", 12, "masculino", true, 12));
-        regrasReport.reportRegras(traidor);
-        Assert.assertTrue(traidor.getTraidor());
+
+        Exception e = Assert.assertThrows(ReportarException.class, () ->
+            regrasReport.reportRegras(true));
+        Assert.assertTrue(e.getMessage().contains("teste"));
+
     }
 }

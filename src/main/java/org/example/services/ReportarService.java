@@ -15,7 +15,7 @@ public class ReportarService {
 
     public void reportarTraidor(Integer id, Rebelde traidor) throws ReportarException {
         regrasId.idRegras(id);
-        regrasReport.reportRegras(traidor);
+        regrasReport.reportRegras(traidor.getTraidor());
         rebeldeRepo.getListaRebelde().get(id).setTraidor(true);
     }
 }

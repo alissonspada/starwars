@@ -8,15 +8,19 @@ import java.util.List;
 
 public class RegrasReport {
 
-    public void reportRegras(Rebelde traidor) throws ReportarException {
+    public void reportRegras(Boolean traidor) throws ReportarException {
 
         List<String> erro = new ArrayList<>();
 
 
         if(traidor == null){
             erro.add("valor invalido");
-        }else if (traidor.getTraidor()){
-            System.out.println("traidor reportado");
+        }else if (traidor.equals(true)){
+            erro.add("traidor reportado");
+        }
+
+        if (!erro.isEmpty()) {
+            throw new ReportarException(String.join("\n, erro"));
         }
     }
 
