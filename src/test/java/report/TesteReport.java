@@ -19,7 +19,7 @@ public class TesteReport {
     public void shouldReturnTraitor() throws ReportarException {
 
         Exception e = Assert.assertThrows(ReportarException.class, () ->
-            regrasReport.reportRegras(true));
+                regrasReport.reportRegras(true));
         Assert.assertTrue(e.getMessage().contains("teste"));
 
     }

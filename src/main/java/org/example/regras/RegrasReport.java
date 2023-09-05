@@ -16,12 +16,10 @@ public class RegrasReport {
         if(traidor == null){
             erro.add("valor invalido");
         }else if (traidor.equals(true)){
-            erro.add("traidor reportado");
+            throw new ReportarException("aubau");
         }
 
-        if (!erro.isEmpty()) {
-            throw new ReportarException(String.join("\n, erro"));
-        }
+
     }
 
 }
