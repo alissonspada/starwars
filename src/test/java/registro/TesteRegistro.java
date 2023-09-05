@@ -1,3 +1,5 @@
+package registro;
+
 import org.example.exceptions.RegistrarException;
 import org.example.regras.RegrasRegistro;
 import org.example.repository.ItemRepository;
@@ -11,9 +13,7 @@ import java.util.Arrays;
 
 public class TesteRegistro {
 
-    ItemRepository itemRepository = new ItemRepository();
-    LocalizacaoRepository localizacaoRepository = new LocalizacaoRepository();
-    RebeldeRepository rebeldeRepository = new RebeldeRepository();
+
     RegrasRegistro regrasRegistro = new RegrasRegistro();
 
     @Test

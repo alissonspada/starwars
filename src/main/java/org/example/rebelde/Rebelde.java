@@ -54,11 +54,12 @@ public class Rebelde {
     }
 
 
-    public Boolean getTraidor() {
+    public boolean getTraidor() {
         return traidor;
     }
 
     public void setTraidor(Boolean traidor) {
         this.traidor = traidor;
     }
+
 }

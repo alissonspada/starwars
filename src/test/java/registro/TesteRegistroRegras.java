@@ -1,3 +1,5 @@
+package registro;
+
 import org.example.exceptions.RegistrarException;
 import org.example.regras.RegrasRegistro;
 import org.junit.Assert;
