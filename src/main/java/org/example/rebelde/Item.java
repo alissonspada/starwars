@@ -1,61 +1,72 @@
 package org.example.rebelde;
 
-import java.util.List;
-
 public class Item {
 
     private Integer id;
-    private String nomeItem;
-    private Integer quantidade;
+    private String comida;
+    private String agua;
+    private String municao;
+    private String arma;
 
-    private List<Integer> listaItem;
-
-    public Item(String nomeItem, Integer quantidade, Integer id, List<Integer> listaItem) {
-        this.listaItem = listaItem;
-        this.nomeItem = nomeItem;
-        this.quantidade = quantidade;
+    public Item(Integer id, String comida, String agua, String municao, String arma) {
         this.id = id;
+        this.comida = comida;
+        this.agua = agua;
+        this.municao = municao;
+        this.arma = arma;
     }
+
+    public Item(String comida, String agua, String municao, String arma) {
+        this.comida = comida;
+        this.agua = agua;
+        this.municao = municao;
+        this.arma = arma;
+    }
+
 
     public Item() {
     }
 
 
-    public Integer getQuantidade() {
-        return quantidade;
-    }
-
-    public void setQuantidade(Integer quantidade) {
-        this.quantidade = quantidade;
-    }
-
-    public List<Integer> getListaItem() {
-        return listaItem;
-    }
-
-    public void setListaItem(List<Integer> listaItem) {
-        this.listaItem = listaItem;
-    }
-
     public Integer getId() {
         return id;
     }
-
 
     public void setId(Integer id) {
         this.id = id;
     }
 
-    public String getNomeItem() {
-        return nomeItem;
+    public String getComida() {
+        return comida;
     }
 
-    public void setNomeItem(String nomeItem) {
-        this.nomeItem = nomeItem;
+    public void setComida(String comida) {
+        this.comida = comida;
     }
 
+    public String getAgua() {
+        return agua;
+    }
 
+    public void setAgua(String agua) {
+        this.agua = agua;
+    }
 
+    public String getMunicao() {
+        return municao;
+    }
+
+    public void setMunicao(String municao) {
+        this.municao = municao;
+    }
+
+    public String getArma() {
+        return arma;
+    }
+
+    public void setArma(String arma) {
+        this.arma = arma;
+    }
 }
 
 

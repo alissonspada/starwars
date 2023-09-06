@@ -13,49 +13,48 @@ public class RegrasRegistro{
 
 
             if (nome == null){
-                erro.add("Nome inválido");
+                throw new RegistrarException("Nome inválido");
             }else if (nome.isBlank()){
-                erro.add("nome em branco");
+                throw new RegistrarException("nome em branco");
             }
 
             if (idade == null) {
-                erro.add("Idade Invalida");
+                throw new RegistrarException("Idade Invalida");
             } else if (idade < 18){
-                erro.add("menor de idade");
+                throw new RegistrarException("menor de idade");
             }
 
             if (genero == null){
-                erro.add("Genero Indefinido");
+                throw new RegistrarException("Genero Indefinido");
             } else if (!genero.equals("homem") &&
             !genero.equals("mulher")){
-                erro.add("genero incorreto: escolha homem ou mulher");
+                throw new RegistrarException("genero incorreto: escolha homem ou mulher");
             }
 
             if (traidor == null){
-                erro.add("valor invalido");
-            }   else if (!traidor.equals("sim") &&
-                !traidor.equals("nao")){
-                erro.add("valor invalido: escolha sim ou nao");
+                throw new RegistrarException("valor invalido");
+            }   else if (!traidor.equals("sim")){
+                throw new RegistrarException("valor invalido: escolha sim ou nao");
             };
 
             if (latitude == null){
-                erro.add("valor invalido");
+                throw new RegistrarException("valor invalido");
             }
 
             if (longitude == null){
-                erro.add("valor invalido");
+                throw new RegistrarException("valor invalido");
             }
 
             if (galaxia == null){
-                erro.add("valor invalido");
+                throw new RegistrarException("valor invalido");
             }
 
             if (base == null){
-                erro.add("valor invalido");
+                throw new RegistrarException("valor invalido");
             }
 
             if (inventory == null){
-                erro.add("valor invalido");
+                throw new RegistrarException("valor invalido");
             }
 
             if(!erro.isEmpty()){

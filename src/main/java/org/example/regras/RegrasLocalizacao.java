@@ -9,22 +9,21 @@ public class RegrasLocalizacao {
 
     public void localizacaoRegras (Integer latitude, Integer longitude, Integer galaxia, String base)throws LocalizacaoException {
 
-        List<String> erro = new ArrayList<>();
 
         if (latitude == null){
-            erro.add("valor invalido");
+          throw new LocalizacaoException ("valor invalido");
         }
 
         if(longitude == null){
-            erro.add("valor invalido");
+            throw new LocalizacaoException ("valor invalido");
         }
 
         if(galaxia == null){
-            erro.add("valor invalido");
+            throw new LocalizacaoException ("valor invalido");
         }
 
         if(base == null){
-            erro.add("valor invalido");
+            throw new LocalizacaoException ("valor invalido");
         }
 
 

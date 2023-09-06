@@ -1,5 +1,9 @@
 package org.example.rebelde;
 
+import org.example.repository.ItemRepository;
+import org.example.repository.LocalizacaoRepository;
+import org.example.repository.RebeldeRepository;
+
 public class Rebelde {
 
     private Integer id;
@@ -18,6 +22,7 @@ public class Rebelde {
 
     public Rebelde() {
     }
+
 
 
 

@@ -1,7 +1,6 @@
 package org.example.regras;
 
 import org.example.exceptions.ReportarException;
-import org.example.rebelde.Rebelde;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,9 +13,9 @@ public class RegrasReport {
 
 
         if(traidor == null){
-            erro.add("valor invalido");
+            throw new ReportarException("valor invalido");
         }else if (traidor.equals(true)){
-            throw new ReportarException("Rebelde Reportado");
+            System.out.println("Rebelde Reportado");
         }
 
 

@@ -17,6 +17,9 @@ public class ItemRepository {
     }
 
 
-    public void plusQuantity() {
+
+
+
+    public void minusQuantity(int idItem, int idDestino, int quantidade) {
     }
 }
