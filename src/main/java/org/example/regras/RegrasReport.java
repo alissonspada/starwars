@@ -16,7 +16,7 @@ public class RegrasReport {
         if(traidor == null){
             erro.add("valor invalido");
         }else if (traidor.equals(true)){
-            throw new ReportarException("aubau");
+            throw new ReportarException("Rebelde Reportado");
         }
 
 

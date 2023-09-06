@@ -20,7 +20,7 @@ public class TesteReport {
 
         Exception e = Assert.assertThrows(ReportarException.class, () ->
                 regrasReport.reportRegras(true));
-        Assert.assertTrue(e.getMessage().contains("teste"));
+        Assert.assertTrue(e.getMessage().contains("Rebelde Reportado"));
 
     }
 }

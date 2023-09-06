@@ -6,20 +6,28 @@ public class Item {
 
     private Integer id;
     private String nomeItem;
-    private Integer pontos;
+    private Integer quantidade;
 
     private List<Integer> listaItem;
 
-    public Item(String nomeItem, Integer pontos, Integer id, List<Integer> listaItem) {
+    public Item(String nomeItem, Integer quantidade, Integer id, List<Integer> listaItem) {
         this.listaItem = listaItem;
         this.nomeItem = nomeItem;
-        this.pontos = pontos;
+        this.quantidade = quantidade;
         this.id = id;
     }
 
     public Item() {
     }
 
+
+    public Integer getQuantidade() {
+        return quantidade;
+    }
+
+    public void setQuantidade(Integer quantidade) {
+        this.quantidade = quantidade;
+    }
 
     public List<Integer> getListaItem() {
         return listaItem;
@@ -44,14 +52,6 @@ public class Item {
 
     public void setNomeItem(String nomeItem) {
         this.nomeItem = nomeItem;
-    }
-
-    public Integer getPontos() {
-        return pontos;
-    }
-
-    public void setPontos(Integer pontos) {
-        this.pontos = pontos;
     }
 
 

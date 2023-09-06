@@ -13,7 +13,7 @@ public class Rebelde {
         this.nome = nome;
         this.idade = idade;
         this.genero = genero;
-        this.traidor = traidor;
+        this.traidor = false;
     }
 
     public Rebelde() {
