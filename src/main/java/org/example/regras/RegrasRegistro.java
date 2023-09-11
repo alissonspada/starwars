@@ -7,7 +7,7 @@ import java.util.List;
 
 public class RegrasRegistro{
 
-        public void registroRegras(String nome, Integer idade, String genero, Boolean traidor, Integer latitude, Integer longitude, Integer galaxia, String base, List<Integer> inventory) throws RegistrarException{
+        public void registroRegras(String nome, Integer idade, String genero, Integer latitude, Integer longitude, Integer galaxia, String base, List<Integer> item) throws RegistrarException{
 
             List<String> erro = new ArrayList<>();
 
@@ -31,11 +31,6 @@ public class RegrasRegistro{
                 throw new RegistrarException("genero incorreto: escolha homem ou mulher");
             }
 
-            if (traidor == null){
-                throw new RegistrarException("valor invalido");
-            }   else if (!traidor.equals("sim")){
-                throw new RegistrarException("valor invalido: escolha sim ou nao");
-            };
 
             if (latitude == null){
                 throw new RegistrarException("valor invalido");
@@ -53,9 +48,6 @@ public class RegrasRegistro{
                 throw new RegistrarException("valor invalido");
             }
 
-            if (inventory == null){
-                throw new RegistrarException("valor invalido");
-            }
 
             if(!erro.isEmpty()){
                 throw new RegistrarException(String.join("null", erro));

@@ -10,14 +10,13 @@ public class Rebelde {
     private String nome;
     private Integer idade;
     private String genero;
-    private Boolean traidor;
 
-    public Rebelde(String nome, Integer idade, String genero, Boolean traidor, Integer id) {
+
+    public Rebelde(String nome, Integer idade, String genero, Integer id) {
         this.id = id;
         this.nome = nome;
         this.idade = idade;
         this.genero = genero;
-        this.traidor = false;
     }
 
     public Rebelde() {
@@ -58,13 +57,5 @@ public class Rebelde {
         this.genero = genero;
     }
 
-
-    public boolean getTraidor() {
-        return traidor;
-    }
-
-    public void setTraidor(Boolean traidor) {
-        this.traidor = traidor;
-    }
 
 }

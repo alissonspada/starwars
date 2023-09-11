@@ -1,3 +1,5 @@
+package localizacao;
+
 import org.example.exceptions.IdException;
 import org.example.exceptions.LocalizacaoException;
 import org.example.rebelde.Localizacao;
@@ -20,10 +22,11 @@ public class TestesLocalizacao {
      private final LocalizacaoService localizacaoService = new LocalizacaoService();
 
      @Test
-     public void shuouldUpdateLatitude() throws LocalizacaoException, IdException {
-        localizacaoRepository.addLocal(new Localizacao(0,11,12,13,"teste"));
-            localizacaoService.atualizarLocal(0,11,12,"teste",0);
-        Assert.assertEquals(Optional.of(0), localizacaoRepository.getListaLocal().get(0).getLatitude());
+     public void shouldUpdateLocation() throws LocalizacaoException, IdException {
+         Localizacao local;
+         localizacaoRepository.addLocal(local = new Localizacao(1,13,12,0,"teste"));
+            localizacaoService.atualizarLocal(2,15,12,"teste", 0);
+        Assert.assertEquals(local, localizacaoRepository.getListaLocal().get(0));
 
      }
 

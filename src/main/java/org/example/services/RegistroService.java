@@ -18,14 +18,15 @@ public class RegistroService {
     private final RebeldeRepository rebeldeRepo = new RebeldeRepository();
     private final RegrasRegistro regrasRegistro = new RegrasRegistro();
 
-    public void registrarRebelde (String nome, Integer idade, String genero, Integer latitude, Integer longitude, Integer galaxia, String base, Boolean traidor, List<Integer> item) throws RegistrarException {
+    public void registrarRebelde (String nome, Integer idade, String genero, Integer latitude, Integer longitude, Integer galaxia, String base, String comida, String agua, String municao, String arma ) throws RegistrarException {
 
-            regrasRegistro.registroRegras(nome, idade, genero, traidor, latitude, longitude, galaxia, base, item);
+
             Integer pegarId = rebeldeRepo.getListaRebelde().size();
 
-        Rebelde novoRebelde = new Rebelde(nome, idade, genero, traidor, pegarId);
+        Rebelde novoRebelde = new Rebelde(nome, idade, genero, pegarId);
         Localizacao novaLoca = new Localizacao(latitude, longitude, galaxia, pegarId,base);
-        Item novoItem = new Item();
+        Item novoItem = new Item(comida, agua, arma, municao);
+
 
         rebeldeRepo.addRebelde(novoRebelde);
         localRepo.addLocal(novaLoca);

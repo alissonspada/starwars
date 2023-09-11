@@ -12,5 +12,6 @@ public class RebeldeRepository {
     }
     public void addRebelde(Rebelde rebelde) {
         listaRebelde.add(rebelde);
+
     }
 }
