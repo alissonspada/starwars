@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class RebeldeRepository {
-    private final List<Rebelde> listaRebelde = new ArrayList<>();
+    private static final List<Rebelde> listaRebelde = new ArrayList<>();
     public List<Rebelde> getListaRebelde(){
         return listaRebelde;
     }

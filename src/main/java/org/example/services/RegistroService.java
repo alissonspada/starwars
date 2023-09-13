@@ -22,7 +22,7 @@ public class RegistroService {
 
 
             Integer pegarId = rebeldeRepo.getListaRebelde().size();
-
+            regrasRegistro.registroRegras(nome,idade,genero,latitude,longitude,galaxia,base);
         Rebelde novoRebelde = new Rebelde(nome, idade, genero, pegarId, report);
         Localizacao novaLoca = new Localizacao(latitude, longitude, galaxia, pegarId,base);
         Item novoItem = new Item(comida, agua, arma, municao);

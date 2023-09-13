@@ -7,6 +7,7 @@ import org.example.regras.RegrasReport;
 import org.example.repository.RebeldeRepository;
 import org.example.services.RegistroService;
 import org.example.services.ReportarService;
+import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.Collections;
@@ -25,11 +26,9 @@ public class TesteReport {
     @Test
     public void shouldReturnTraitor() throws ReportarException, RegistrarException {
         Rebelde rebel;
-        rebeldeRepo.addRebelde(rebel = new Rebelde("rozivaldo",1,"masculino",2,0));
-        registro.registrarRebelde("xupinga", 12, "masculino", 12,13, 14, "aruja", "comida", "agua", "municao", "arma", 0);
-        rebeldeRepo.getListaRebelde().get(0).getReport();
+        rebeldeRepo.addRebelde(rebel = new Rebelde("as",1,"masculino",4,0));
         reportService.reportarRebelde(0);
-
+        Assert.assertEquals(rebel, rebeldeRepo.getListaRebelde().get(0));
 
     }
 }

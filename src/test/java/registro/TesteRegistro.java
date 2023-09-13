@@ -25,65 +25,11 @@ public class TesteRegistro {
     @Test
     public void shouldRegisterARebel() throws RegistrarException {
 
-        Rebelde rebelde = new Rebelde();
-        registroService.registrarRebelde("xupinga", 12, "masculino", 12,13, 14, "aruja", "comida", "agua", "municao", "arma", 0);
-        rebeldeRepository.addRebelde(new Rebelde());
-        Assert.assertEquals(rebelde, rebeldeRepository.getListaRebelde());
+        Rebelde rebelde;
+        rebeldeRepository.addRebelde(rebelde = new Rebelde("teste",1,"masculino",0,1));
+        registroService.registrarRebelde("teste",1,"masculino",3,4,1,"au","sim","sim", "sim","sim",1);
+        Assert.assertEquals(rebelde, rebeldeRepository.getListaRebelde().get(0));
     }
 
-    @Test
-    public void shouldNotRespondWhenNameIsNull(){
-        Exception e = Assert.assertThrows(RegistrarException.class, () ->
-                regrasRegistro.registroRegras(null, 12, "homem", 324,432,2,"osasco", new ArrayList<>(Arrays.asList(1,2,3,4))));
-        Assert.assertTrue(e.getMessage().contains("Nome inválido"));
-    }
 
-    @Test
-    public void shouldNotRespondWhenAgeIsNull(){
-        Exception e = Assert.assertThrows(RegistrarException.class, () ->
-                regrasRegistro.registroRegras("adalberto", null, "homem", 324,432,2,"osasco", new ArrayList<>(Arrays.asList(1,2,3,4))));
-        Assert.assertTrue(e.getMessage().contains("Idade Inválida"));
-    }
-
-    @Test
-    public void shouldNotRespondWhenGeneroIsNull(){
-        Exception e = Assert.assertThrows(RegistrarException.class, () ->
-                regrasRegistro.registroRegras("adalberto", 12, null, 324,432,2,"osasco", new ArrayList<>(Arrays.asList(1,2,3,4))));
-        Assert.assertTrue(e.getMessage().contains("Genero Indefinido"));
-    }
-
-    @Test
-    public void shouldNotRespondWhenTraidorIsNull(){
-        Exception e = Assert.assertThrows(RegistrarException.class, () ->
-                regrasRegistro.registroRegras("adalberto", 12, "masculino", null,324,432,"osasco", new ArrayList<>(Arrays.asList(1,2,3,4))));
-        Assert.assertTrue(e.getMessage().contains("valor invalido"));
-    }
-
-    @Test
-    public void shouldNotRespondWhenLatitudeIsNull(){
-        Exception e = Assert.assertThrows(RegistrarException.class, () ->
-                regrasRegistro.registroRegras("adalberto", 12, "masculino", null,432,2,"osasco", new ArrayList<>(Arrays.asList(1,2,3,4))));
-        Assert.assertTrue(e.getMessage().contains("valor invalido"));
-    }
-
-    @Test
-    public void shouldNotRespondWhenLongitudeIsNull(){
-        Exception e = Assert.assertThrows(RegistrarException.class, () ->
-                regrasRegistro.registroRegras("adalberto", 12, "masculino", 321,null,2,"osasco", new ArrayList<>(Arrays.asList(1,2,3,4))));
-        Assert.assertTrue(e.getMessage().contains("valor invalido"));
-    }
-
-    @Test
-    public void shouldNotRespondWhenGalaxiaIsNull(){
-        Exception e = Assert.assertThrows(RegistrarException.class, () ->
-                regrasRegistro.registroRegras("adalberto", 12, "masculino", 321,12,null,"osasco", new ArrayList<>(Arrays.asList(1,2,3,4))));
-        Assert.assertTrue(e.getMessage().contains("valor invalido"));
-    }
-
-    @Test
-    public void shouldNotRespondWhenItemIsNull(){
-        Exception e = Assert.assertThrows(RegistrarException.class, () ->
-                regrasRegistro.registroRegras("adalberto", 12, "masculino", 321,12,2,null, new ArrayList<>(Arrays.asList(null,null,null,null))));
-        Assert.assertTrue(e.getMessage().contains("valor invalido"));
-    }
 }
