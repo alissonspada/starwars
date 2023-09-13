@@ -26,7 +26,7 @@ public class TesteRegistro {
     public void shouldRegisterARebel() throws RegistrarException {
 
         Rebelde rebelde = new Rebelde();
-        registroService.registrarRebelde("xupinga", 12, "masculino", 12,13, 14, "aruja", "comida", "agua", "municao", "arma");
+        registroService.registrarRebelde("xupinga", 12, "masculino", 12,13, 14, "aruja", "comida", "agua", "municao", "arma", 0);
         rebeldeRepository.addRebelde(new Rebelde());
         Assert.assertEquals(rebelde, rebeldeRepository.getListaRebelde());
     }
